@@ -1,0 +1,22 @@
+index=wineventlog EventCode=4625
+| stats count by user, src_ip
+| where count > 3
+| sort - count
+
+
+
+
+🧠 What this does
+Detects failed login attempts
+Groups by user + IP
+Flags if attempts are more than 3
+
+
+
+
+🎯 Why important
+
+👉 Used to detect:
+
+Brute force attacks
+Unauthorized access attempts

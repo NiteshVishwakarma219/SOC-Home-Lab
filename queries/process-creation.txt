@@ -1,0 +1,25 @@
+index=wineventlog EventCode=1
+| table _time, host, user, Image, CommandLine
+| sort - _time
+
+
+
+
+
+
+🧠 What this does
+Shows all process execution logs (from Sysmon)
+Displays:
+Process name
+Command line
+User
+
+
+
+🎯 Why important
+
+👉 Helps detect:
+
+Suspicious programs
+Malware execution
+Unknown commands

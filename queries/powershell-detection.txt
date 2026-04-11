@@ -1,0 +1,19 @@
+index=wineventlog EventCode=1
+| search Image="*powershell*"
+| table _time, host, user, CommandLine
+| sort - _time
+
+
+
+
+🧠 What this does
+Detects PowerShell usage
+Shows command executed
+
+
+🎯 Why important
+👉 PowerShell is commonly used in:
+
+Attacks
+Malware
+Privilege escalation

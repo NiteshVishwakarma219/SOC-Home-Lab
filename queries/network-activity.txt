@@ -1,0 +1,10 @@
+index=wineventlog EventCode=3
+| table _time, SourceIp, DestinationIp, DestinationPort
+
+
+
+
+👉 Detects:
+Suspicious connections
+Malware communication
+
