@@ -1,0 +1,44 @@
+<Sysmon schemaversion="4.90">
+
+  <!-- ===================== -->
+  <!-- 🔹 HASH ALGORITHMS -->
+  <!-- ===================== -->
+  <HashAlgorithms>sha256</HashAlgorithms>
+
+  <!-- ===================== -->
+  <!-- 🔹 PROCESS CREATION -->
+  <!-- ===================== -->
+  <EventFiltering>
+
+    <ProcessCreate onmatch="include">
+      <CommandLine condition="is not">C:\Windows\System32\svchost.exe</CommandLine>
+    </ProcessCreate>
+
+  <!-- ===================== -->
+  <!-- 🔹 NETWORK CONNECTION -->
+  <!-- ===================== -->
+    <NetworkConnect onmatch="include" />
+
+  <!-- ===================== -->
+  <!-- 🔹 FILE CREATION -->
+  <!-- ===================== -->
+    <FileCreate onmatch="include" />
+
+  <!-- ===================== -->
+  <!-- 🔹 REGISTRY CHANGES -->
+  <!-- ===================== -->
+    <RegistryEvent onmatch="include" />
+
+  <!-- ===================== -->
+  <!-- 🔹 IMAGE LOAD -->
+  <!-- ===================== -->
+    <ImageLoad onmatch="include" />
+
+  <!-- ===================== -->
+  <!-- 🔹 PROCESS TERMINATION -->
+  <!-- ===================== -->
+    <ProcessTerminate onmatch="include" />
+
+  </EventFiltering>
+
+</Sysmon>
