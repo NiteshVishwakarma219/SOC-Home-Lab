@@ -163,11 +163,6 @@ Includes:
 
 ---
 
-# 💼 Resume Highlight
-
-✔ Built a SOC Home Lab using Splunk and Sysmon to simulate and detect real-world cyber attacks, including brute force and PowerShell-based threats, with alerting and dashboard visualization.
-
----
 
 # 🚀 Future Improvements
 
